@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.2em;
+    margin: auto;
+    margin-top: 2em;
+}
+.container > *{
+    width:100%;
+}
+button{
+    background-color: rgb(241, 180, 180);
+}
+
+mat-card {
+    background-color: aliceblue;
+  }

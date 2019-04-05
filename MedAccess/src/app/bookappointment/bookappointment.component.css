@@ -1,0 +1,37 @@
+.container {
+    padding: 0 1.2em;
+    margin: auto;
+    margin-top: 2em;
+  }
+  
+  .container > * {
+    width: 100%;
+  }
+  
+  mat-card {
+    background-color: aliceblue;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    padding-right: 16px;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  .font-garamound
+{
+  font-family: Trebuchet MS;
+}
+
+.font-styling
+{
+  font-size:  15px;
+}
+
+.font-styling-header
+{
+  font-weight: bold;
+  font-size:  20px;
+}

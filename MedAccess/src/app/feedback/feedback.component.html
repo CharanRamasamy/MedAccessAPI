@@ -1,0 +1,28 @@
+<br/><section>
+  <div class="container">
+      <mat-card>
+          <mat-card-title>
+            Feedback
+          </mat-card-title>
+          <mat-card-content>
+    <form [formGroup]="feedbackForm" (ngSubmit) = "onClickSubmit()" novalidate>
+      <mat-form-field>
+        <input matInput placeholder="User Name" name="username" formControlName="username" value= {{patientDetails.patient_firstname}} disabled />
+      </mat-form-field><br/>
+      <mat-form-field>
+        <input matInput placeholder="Email ID" name="email" formControlName="email" value= {{patientDetails.patient_email}} disabled/>
+      </mat-form-field><br/>
+      <mat-form-field>
+        <input matInput placeholder="Doctor's Name" name="docname" formControlName="docname" value= {{doctorDetails.doctor_firstname}} disabled/> 
+      </mat-form-field><br/>
+      <mat-form-field>
+          <textarea matInput formControlName="description" name="description"
+          placeholder="Leave a Comment" matAutosizeMinRows=5 matAutosizeMaxRows=10></textarea>
+      </mat-form-field><br/>
+    
+      <button mat-raised-button color="dimgrey">SUBMIT</button><br><br>
+      <button mat-raised-button color="dimgrey" (click)="provideFeedback()">READ FEEDBACK</button>
+  </form>
+  </mat-card-content>
+  </mat-card>
+    </div></section>

@@ -1,0 +1,22 @@
+<div class="container">
+  <mat-card>
+      <label class="font-garamound font-styling-header">Book Appointment</label><br><br><br>
+      <form [formGroup]='appointmentform' fxLayout ="column"  novalidate>
+          <label class="font-garamound font-styling"> <b>Patient Name :  </b> {{listPatients.patient_firstname}}  </label> 
+          <label class="font-garamound font-styling"> <b>Patient Phone Number : </b>{{listPatients.patient_phone}} </label> 
+          <label class="font-garamound font-styling"> <b> Doctor Name :  </b>{{listDoctors.doctor_firstname}}  </label>
+          <label class="font-garamound font-styling"> <b> Date of the appointment : </b> <input type="date" formControlName="dateOfApp" ></label>  
+            <label class="font-garamound font-styling"> <b>Appointment Time : </b>
+            <mat-select matInput  placeholder="Select Appointment Time" formControlName="time">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+              </mat-select>
+            </label>
+              
+      <button mat-button type="submit"  (click)="onClickAddAppointment()"> Confirm Appointment </button>
+      </form>
+
+  </mat-card>
+        
+</div>

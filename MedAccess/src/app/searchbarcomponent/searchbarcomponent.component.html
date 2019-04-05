@@ -1,0 +1,44 @@
+<!-- <div class="container">
+    <div fxLayout="row" fxLayout.lt-md="column"  fxLayoutGap="10px" fxLayoutAlign = "center stretch">
+        <div fxLayout.gt-md="row" fxLayout.lt-sm="column"  fxLayoutGap="10px" fxFlex="100"  fxFlex.gt-md="50">
+        <a mat-stroked-button routerLink="/home" fxFlex.lt-md="50" fxFlex.lt-sm="100">Home</a>
+        <a mat-stroked-button routerLink="/history" fxFlex.lt-md="50" fxFlex.lt-sm="100">View Medical History</a>
+
+    </div>
+    <div fxLayout.gt-md="row" fxLayout.lt-sm="column"  fxLayoutGap="10px" fxFlex="100"  fxFlex.gt-md="50">
+          <form (ngSubmit) = "doSearch()" class="navigationsearch" fxFlex.lt-md="50" fxFlex.lt-sm="100" ngNativeValidate> 
+              <input type="text" [(ngModel)]= "searchterm" name ="searchterm" placeholder="Search Doctors.." required>
+              <button type="submit"> 
+               <mat-icon>search</mat-icon>
+              </button>
+            </form>
+      </div>
+
+      <div fxLayout.gt-md="row" fxLayout.lt-sm="column"  fxLayoutGap="10px" fxFlex="100"  fxFlex.gt-md="50">
+          <a mat-stroked-button fxFlex="10" fxFlex.lt-md="50" fxFlex.lt-sm="100" routerLink="/feedback">Provide Feedback</a>
+          <a mat-stroked-button fxFlex="10" fxFlex.lt-md="50" fxFlex.lt-sm="100" routerLink="/register">Register</a>
+          <a mat-stroked-button fxFlex="10" fxFlex.lt-md="50" fxFlex.lt-sm="100" routerLink="/login">Login</a>
+        </div>
+        </div>
+
+      </div> -->
+      <div class="container">
+<nav class="navigation" fxLayout ="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center stretch" fxLayoutGap.xs="5px">
+    <a mat-stroked-button routerLink="/home" fxFlex="10">Home</a>
+    <a *ngIf="isPatientLoggedIn || !isUserLoggedIn" mat-stroked-button routerLink="/history" fxFlex="20">Dashboard</a>
+    <a *ngIf="isDoctorLoggedIn" mat-stroked-button routerLink="/doctor-home" fxFlex="20">Dashboard</a>
+    <div fxFlex="40" fxFlexOrder.xs ="6">
+    <form (ngSubmit) = "doSearch()" class="navigationsearch" ngNativeValidate> 
+        <input type="text" [(ngModel)]= "searchterm" name ="searchterm" placeholder="Search Doctors.." required>
+        <button type="submit"> 
+         <mat-icon>search</mat-icon>
+        </button>
+      </form>
+    </div>
+
+    <a *ngIf="!isUserLoggedIn" mat-stroked-button fxFlex="10" routerLink="/register-home">Register</a>
+    <a *ngIf="!isUserLoggedIn" mat-stroked-button fxFlex="10" routerLink="/login">Login</a>
+    <a *ngIf="isUserLoggedIn" mat-stroked-button fxFlex="10" routerLink="/logout">Logout</a>
+    
+</nav>
+</div>

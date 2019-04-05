@@ -1,0 +1,60 @@
+<br>
+<section style="background-color:rgb(219, 213, 213)">
+
+
+<div style="margin-right: 80%">
+    <h4>Doctor Name: {{profile.doctor_firstname}}</h4>
+    <h4>Speciality: {{profile.doctor_speciality}}</h4>
+</div>
+
+<div style="margin-left: 80%">
+    <h4>Doctor Reg ID: {{profile.doctor_reg_id}}</h4>
+</div>
+
+
+</section>
+
+
+<div>
+
+
+    <h3> List of appointments</h3>
+
+    
+<mat-card *ngFor="let appointment of listAppointments"  class="appointment__card" (click)="openDetails()" [ngClass]="{'appointment__card-dark': darkMode}">
+  
+
+    <mat-card-content class="title-text__container">
+        <span class="title__text">
+
+            Patient name : {{appointment.patient_firstname}}
+
+        </span>
+      <br>
+        <span class="title__text">
+
+            Patient Phone : {{appointment.patient_phone}}
+
+        </span>
+        <br>
+        <span class="title__text">
+
+            Appointment date : {{appointment.app_date}}
+
+        </span>
+        <br>
+        <span class="title__text">
+
+            Appointment time : {{appointment.app_time}}
+
+        </span>
+        <br>
+        
+        <button mat-button type="submit" (click)="onSubmit(appointment)">Cancel Appointment</button>
+
+    </mat-card-content>
+
+      
+</mat-card>
+
+</div>

@@ -1,0 +1,45 @@
+<!-- <section id=“container”>
+       <div>
+       <input type=“search” name=“search_bar” placeholder=“Search Doctors..“>
+       </div>
+</section> --><!--
+   Carousel View
+--><!-- <section id=“container”>
+      <div>
+      <input type=“search” name=“search_bar” placeholder=“Search Doctors..“>
+      </div>
+</section> --><!--
+  Carousel View
+--><section>
+    <div id="container">
+        <div
+          ng2-carouselamos
+          class="slides-wrapper"
+          [items]="items"
+          [width]="980"
+          [$prev]="prev"
+          [$next]="next"
+          [$item]="item"
+        >
+        </div>
+      
+        <ng-template #prev>
+        </ng-template>
+        <ng-template #next>
+        </ng-template>
+        <ng-template #item let-item let-i="index">
+     
+                <div class="items">
+                  <img src="{{ item.name }}">
+                </div>
+        
+        </ng-template>
+     </div>
+     </section>
+     
+     <section id="container">
+     <div>
+     <button mat-raised-button color="dimgrey">View Medical Records</button>
+     <button mat-raised-button color="dimgrey">Provide Feedback</button>
+     </div>
+     </section>

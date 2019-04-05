@@ -1,0 +1,41 @@
+<div class="container">
+    <label class="font-garamound font-styling-header">Doctor Details</label><br><br>
+    <mat-card  *ngFor="let doctor of listDoctors">
+        <mat-card-content>
+                <span class=".font-garamound"><b>Doctor Name: </b>
+                    {{doctor.doctor_firstname}} {{doctor.doctor_lasstname}} </span>
+                <br>
+                <span class=".font-garamound"><b>Medical Specialization : </b>
+                    {{doctor.doctor_speciality}}
+                    </span>
+                <br>
+                <span class=".font-garamound"><b>Contact :  </b>
+                    {{doctor.doctor_phone}}
+                    </span>
+                <br>
+                <span class=".font-garamound"><b>Address: </b>
+                    {{doctor.doctor_street}} , {{doctor.doctor_city}} 
+                    </span>
+                <br>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <span fxFlex="50%" fxFlex.xs ="100%">
+          <button mat-stroked-button (click)="giveFeedback(doctor)"> Feedback
+          <mat-icon>
+              feedback           
+          </mat-icon>  
+          </button>
+          </span>
+          <span fxFlex="50%" fxFlex.xs ="100%">
+              <button mat-stroked-button (click)="bookAppointment(doctor)"> Book Appointment
+              <mat-icon>
+                  info             
+              </mat-icon>  
+              </button>
+              </span>
+              
+        </mat-card-actions>
+      </mat-card>
+      
+    </div>

@@ -1,0 +1,48 @@
+<div class="container" fxLayout ="column" fxLayoutGap = "5px">
+
+        <label class="font-garamound font-styling-header">Patient Dashboard</label><br>
+        <label class="font-garamound font-styling">Patient Name : {{listPatients.patient_firstname}}</label> 
+        <label class="font-garamound font-styling">Patient Phone Number : {{listPatients.patient_phone}}  </label>
+        <br>
+
+        <mat-card *ngFor="let appointment of appointments">
+
+        <mat-card-content>
+                        <span class=".font-garamound"><b>Doctor Name    : </b>
+                        {{appointment.doctor_firstname}}
+
+                        </span>
+                        <br>
+                        <span class=".font-garamound"> <b>Appointment Date : </b>
+                         {{appointment.app_date}}
+
+                        </span>
+                        <br>
+                        <span class=".font-garamound"><b>Appointment Time :</b> {{appointment.app_time}}
+
+                        </span>
+                        <br>
+                        <span class=".font-garamound"><b> Doctor Phone  :  </b>
+                           {{appointment.doctor_phone}}
+
+                         </span>
+                         <br>
+        </mat-card-content>
+
+        <mat-card-actions>
+              <span>
+                  <button mat-stroked-button class="btn" (click)="clickMethod(appointment)"> Delete Appointment
+                  <mat-icon>
+                      info             
+                  </mat-icon>  
+                  </button>
+                  </span>
+                  
+            </mat-card-actions>
+
+
+        </mat-card>
+
+   
+    
+    </div>

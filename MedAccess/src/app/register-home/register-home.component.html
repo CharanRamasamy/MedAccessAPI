@@ -1,0 +1,23 @@
+
+
+<form [formGroup]='UserTypeCheck' fxLayout ="column"  novalidate>
+
+<mat-form-field>
+
+  <mat-select placeholder="Type of User" formControlName="selectUser">
+     
+    <mat-option *ngFor="let users of usersType" [value]="users.value">{{users.viewValue}}</mat-option>
+  
+  </mat-select>
+
+  <mat-error *ngIf="UserTypeCheck.controls.selectUser.errors?.required && UserTypeCheck.controls.selectUser.touched">Please select the type of user</mat-error>
+
+</mat-form-field>
+
+<mat-card-actions>
+
+  <button mat-button type="submit" (click)="onSubmit()">Continue</button>
+
+</mat-card-actions>
+
+</form>

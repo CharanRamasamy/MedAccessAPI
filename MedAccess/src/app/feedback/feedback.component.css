@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.2em;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.container > *{
+    width:100%;
+}
+button{
+    background-color: rgb(241, 180, 180);
+}
+
+mat-card {
+    background-color: aliceblue;
+  }
+
+.container{
+    font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1{
+    font-size: 32px;
+    line-height: 42px;
+}
+h2{
+    font-size: 22px;
+    line-height: 42px;
+}
+h3{
+    font-size: 18px;
+    line-height: 20px;
+}
+h4{
+    font-size: 16px;
+}
+h5{
+    font-size: 14px;
+}

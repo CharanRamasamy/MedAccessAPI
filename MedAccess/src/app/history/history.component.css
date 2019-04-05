@@ -1,0 +1,38 @@
+.container {
+    padding: 0 1.2em;
+    margin: auto;
+    margin-top: 2em;
+    background-color:snow;
+  }
+
+
+.mat-card-header {
+  justify-content: center;
+}
+
+mat-card {
+  background-color: aliceblue;
+}
+
+.font-garamound
+{
+  font-family: Trebuchet MS;
+}
+
+.font-styling
+{
+  font-weight: bold;
+  font-size:  20px;
+}
+
+.font-styling-header
+{
+  font-weight: bold;
+  font-size:  25px;
+}
+
+.btn:hover
+{
+background-color : #FF9999 !important;
+}
+

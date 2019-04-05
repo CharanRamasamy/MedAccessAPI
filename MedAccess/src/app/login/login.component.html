@@ -1,0 +1,32 @@
+<br/><section>
+<div class="container">
+    <mat-card>
+        <mat-card-title>
+          Login
+        </mat-card-title>
+        <mat-card-content>
+  <form [formGroup]="loginForm" (ngSubmit) = "onClickLogin()" novalidate>
+  <mat-form-field>
+    <input matInput name="userName" formControlName="userName" placeholder="Username" minlength="1" required>
+    <mat-error *ngIf="userName.invalid">
+        Please enter the username
+      </mat-error>
+  </mat-form-field><br>
+  <mat-form-field>
+    <input matInput type="password" placeholder="Password" name="password" formControlName="password" required>
+    <mat-error *ngIf="password.invalid">
+        Please enter the password
+      </mat-error>
+  </mat-form-field><br>
+  <mat-form-field>
+
+      <mat-select placeholder="Type of User" formControlName="selectUser">
+          <mat-option *ngFor="let users of usersType" [value]="users.value">{{users.viewValue}}</mat-option>
+      </mat-select>
+  </mat-form-field><br>
+  <button mat-raised-button color="dimgrey">LOGIN</button>
+
+</form>
+</mat-card-content>
+</mat-card>
+  </div></section>
